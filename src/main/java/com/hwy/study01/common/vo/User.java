@@ -33,4 +33,31 @@ public class User {
     public void setAge(String age) {
         this.age = age;
     }
+
+
+    public static int unknow(int[] array, int i) {
+
+        if(i == array.length - 1){
+            return array[i];
+        } else {
+            int temp = unknow(array, i+1);
+            return temp < array[i] ? array[i] : temp;
+        }
+
+        /**
+         * length 4 i 0
+         *
+         * 4 i 2  temp = 3
+         *
+         *
+         */
+    }
+    public static void main(String[] args) {
+        System.out.println(unknow(new int[]{3,5,6,2}, 0));
+    }
+
+
+
+
+
 }
